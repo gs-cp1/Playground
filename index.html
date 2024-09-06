@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue and bulma </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main page components -->
+    <div id="app" class="container">
+        <section class="section">
+            <div class="box">
+                <h1 class="title">To-Do List</h1>
+                <div class="field">
+                    <label class="label">Add New Item</label>
+                    <div class="control">
+                        <input class="input" type="text" v-model="newItem" @keyup.enter="addItem" placeholder="Type and press Enter">
+                    </div>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li v-for="(item, index) in items" :key="index">
+                            {{ item }} <button class="delete " @click="removeItem(index)"></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+      </div>
+
+
+    <!-- Include Bulma CSS from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <!-- Include Vue.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+    <!-- Enable Import map -->
+    <script type="importmap">
+        {
+        "imports": {
+            "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+        }
+        }
+    </script>
+
+    <!-- Include your external JavaScript file -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
