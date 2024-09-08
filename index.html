@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vue and bulma </title>
-
+    <title>Vue and bulma app</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
 </head>
@@ -23,13 +22,13 @@
                 <div class="content">
                     <ul>
                         <li v-for="(item, index) in items" :key="index">
-                            {{ item }} <button class="delete " @click="removeItem(index)"></button>
+                            <button class="delete " @click="removeItem(index)"></button> {{ item }}
                         </li>
                     </ul>
                 </div>
             </div>
         </section>
-      </div>
+    </div>
 
 
     <!-- Include Bulma CSS from CDN -->
