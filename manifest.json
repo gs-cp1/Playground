@@ -1,0 +1,16 @@
+{
+    "name": "ToDo", 
+    "short_name": "TDO",            
+    "start_url": "/Playground/",
+    "display": "standalone",
+    "background_color": "#f0f0f0",
+    "theme_color": "#94B1FF",
+    "icons": [
+      {
+        "src": "gs_favicon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ]
+  }
+  
